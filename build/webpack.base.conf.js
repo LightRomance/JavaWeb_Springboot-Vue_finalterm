@@ -64,9 +64,27 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+          {
+              test: /\.svg$/,
+              loader: 'svg-sprite-loader',
+              include: [resolve('src/icon')],
+              options: {
+                  symbolId: 'icon-[name]'
+              }
+          },
+          {
+              test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+              loader: 'url-loader',
+              exclude: [resolve('src/icons')],
+              options: {
+                  limit: 10000,
+                  name: utils.assetsPath('img/[name].[hash:7].[ext]')
+              }
+          },
     ]
-  },
+    },
+  
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

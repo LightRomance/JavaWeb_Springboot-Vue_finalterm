@@ -9,7 +9,6 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import axios from 'axios'
 // import VueAxios from 'vue-axios'
 // import Vuex from 'vuex'
-
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false

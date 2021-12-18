@@ -59,7 +59,7 @@ export default new Router({
           component: ()=>import('../views/Data_Scanning/input.vue')
         }
       ]
-    },
+      },
     {
       path: '/',
       name: '登录',
